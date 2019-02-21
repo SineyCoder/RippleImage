@@ -1,6 +1,8 @@
 # RippleImage
 具有涟漪效果的图片加载
 
+
+
 ## first
 
 add repository
@@ -38,3 +40,5 @@ final RippleImage image = findViewById(R.id.image);
             }
         }, 1000);
 ```
+
+<img width="500" src="https://img-blog.csdnimg.cn/20190221132058183.gif?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2E1NjgyODM5OTI=,size_16,color_FFFFFF,t_70"/>
