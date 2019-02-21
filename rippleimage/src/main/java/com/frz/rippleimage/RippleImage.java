@@ -39,7 +39,7 @@ public class RippleImage extends AppCompatImageView {
         int textColor = a.getColor(R.styleable.RippleImage_textColor, Color.argb(ints[0], ints[1], ints[2], ints[3]));
         boolean isShowText = a.getBoolean(R.styleable.RippleImage_isShowText, true);
         ints = Utils.hexArgb2Decimal("#99444444");
-        int maskColor = a.getColor(R.styleable.RippleImage_maskColor, Color.argb(ints[0], ints[1], ints[2], ints[3]));
+        maskColor = a.getColor(R.styleable.RippleImage_maskColor, Color.argb(ints[0], ints[1], ints[2], ints[3]));
         duration = a.getInt(R.styleable.RippleImage_duration, 1000);
         maskPaint = new Paint();
         textPaint = new Paint();
@@ -69,7 +69,7 @@ public class RippleImage extends AppCompatImageView {
 
     private Paint maskPaint, textPaint;
     private float maxRadius, currentRadius;
-    private int type, duration = 1000, w, h;
+    private int type, duration = 1000, w, h, maskColor;
     private boolean isRunningAnim;
     private ValueAnimator anim;
     private RectF oval = new RectF();
@@ -79,7 +79,7 @@ public class RippleImage extends AppCompatImageView {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         if(type == 1){
-            canvas.drawARGB(99, 68, 68, 68);
+            canvas.drawColor(maskColor);
             if(text != null){
                 Paint.FontMetrics fm = textPaint.getFontMetrics();
                 int x = (int) ((w - textPaint.measureText(text)) / 2);
