@@ -19,7 +19,7 @@ allprojects {
 add dependency
 ```
 dependencies {
-        implementation 'com.github.SineyCoder:RippleImage:1.1'
+        implementation 'com.github.SineyCoder:RippleImage:1.2'
 }
 ```
 
