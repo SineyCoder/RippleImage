@@ -98,6 +98,11 @@ public class RippleImage extends AppCompatImageView {
         }
     }
 
+    public void clearMask(){
+        type = -1;
+        postInvalidate();
+    }
+
     public void setMask(){
         if(!isRunningAnim){
             type = 1;
@@ -138,6 +143,14 @@ public class RippleImage extends AppCompatImageView {
             });
             anim.start();
         }
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 
     public String getText() {
